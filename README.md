@@ -34,7 +34,19 @@ npm i
 
 # Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
+
+# Step 5: Run tests to ensure everything is working correctly.
+npm run test
 ```
+
+## Testing
+
+This project includes a testing setup using Vitest and React Testing Library:
+
+- `npm run test` - Run tests in watch mode
+- `npm run test:run` - Run tests once
+
+Tests are located in the `src/test/` directory and cover basic component functionality.
 
 **Edit a file directly in GitHub**
 
