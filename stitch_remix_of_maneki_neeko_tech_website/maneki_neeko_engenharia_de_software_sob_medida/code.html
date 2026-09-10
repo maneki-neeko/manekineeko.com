@@ -1,0 +1,531 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Maneki Neeko — Engenharia de Software Sob Medida</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#93000a", "on-primary-fixed": "#3b0a00", "primary": "#ffb59f", "on-secondary": "#003731", "on-tertiary": "#4f2500", "error": "#ffb4ab", "surface-dim": "#121316", "on-background": "#e3e2e6", "on-secondary-fixed": "#00201c", "on-error": "#690005", "background": "#121316", "on-surface": "#e3e2e6", "inverse-surface": "#e3e2e6", "tertiary-container": "#e3802d", "surface-container": "#1f1f23", "on-surface-variant": "#e1bfb6", "surface-variant": "#343538", "surface-container-highest": "#343538", "primary-container": "#ff6a3d", "secondary": "#4fdbc8", "surface-tint": "#ffb59f", "on-primary-fixed-variant": "#862200", "inverse-on-surface": "#303034", "outline": "#a98a81", "secondary-fixed-dim": "#4fdbc8", "on-tertiary-fixed-variant": "#713700", "surface-container-high": "#292a2d", "inverse-primary": "#ae3104", "on-secondary-fixed-variant": "#005048", "tertiary-fixed": "#ffdcc5", "on-primary": "#5f1500", "on-tertiary-container": "#512600", "on-primary-container": "#611600", "outline-variant": "#59413a", "on-secondary-container": "#003f38", "on-tertiary-fixed": "#301400", "secondary-fixed": "#71f8e4", "primary-fixed-dim": "#ffb59f", "surface": "#121316", "surface-container-lowest": "#0d0e11", "primary-fixed": "#ffdbd1", "secondary-container": "#04b4a2", "tertiary-fixed-dim": "#ffb783", "surface-container-low": "#1b1b1f", "surface-bright": "#38393c", "tertiary": "#ffb783", "on-error-container": "#ffdad6" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "gutter": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "margin-mobile": "1rem", "margin": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-lg": ["Inter"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-code": ["JetBrains Mono"], "label-badge": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.015em", fontWeight: "600" }], "display-hero-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-xl-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.005em", fontWeight: "400" }], "headline-sm": ["16px", { lineHeight: "24px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-xl": ["36px", { lineHeight: "44px", letterSpacing: "-0.025em", fontWeight: "600" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0em", fontWeight: "400" }], "label-code": ["13px", { lineHeight: "18px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-badge": ["11px", { lineHeight: "14px", letterSpacing: "0.05em", fontWeight: "700" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30"><div class="h-20 max-w-7xl mx-auto px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm group" href="#inicio"><img alt="Maneki Neeko Logo" class="w-10 h-10 rounded-full object-cover ring-1 ring-primary/20 group-hover:ring-primary/50 transition-all duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1VIIn-hFwzQa4kajtZ8RLI-xKYkfz8LzaXwjjhrfYS6Xrp77kNE12w9wbfQ_bbUcs9oIa35NWuPhdlCyrDSnryYeEyuEi80Vo6t5N_86packlXMIeyIxM0py-ek3YDg-O3prmMgX_I_YTtral6gd-SVU8CTXWPdJBcy8jPz0-FnBla1jx71r6uWCci9m3gAr6C5n52vgzclPEnnn0H9d9EumoB3vBGmoiXLUxBX29AIEdn6TdZKeeYrdwGzJUIBLzZiwfSRt8hi"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Maneki Neeko</span><span class="font-label-code text-body-sm text-secondary font-medium -mt-1">software labs</span></div></a></div><nav class="hidden md:flex items-center gap-space-md bg-surface-container-low/70 px-space-md py-space-xs rounded-full border border-outline-variant/20" data-active-classes="bg-surface-container-high text-on-surface font-medium rounded-lg"><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="#inicio">Início</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="solucoes" href="#solucoes">Soluções</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicos" href="#servicos">Serviços</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-nos" href="#sobre">Sobre nós</a><a class="font-body-md text-body-md px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface transition-colors" data-path="diferenciais" href="#diferenciais">Diferenciais</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary font-headline-sm text-headline-sm font-semibold shadow-[0_0_20px_-4px_rgba(255,106,61,0.4)] hover:shadow-[0_0_24px_rgba(255,106,61,0.6)] hover:brightness-110 transition-all duration-300 border border-primary/30" href="#contato"><span class="material-symbols-outlined text-[18px]">mail</span>Fale conosco</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/40 sm:hidden" src="https://lh3.googleusercontent.com/aida/AEtjO1VIIn-hFwzQa4kajtZ8RLI-xKYkfz8LzaXwjjhrfYS6Xrp77kNE12w9wbfQ_bbUcs9oIa35NWuPhdlCyrDSnryYeEyuEi80Vo6t5N_86packlXMIeyIxM0py-ek3YDg-O3prmMgX_I_YTtral6gd-SVU8CTXWPdJBcy8jPz0-FnBla1jx71r6uWCci9m3gAr6C5n52vgzclPEnnn0H9d9EumoB3vBGmoiXLUxBX29AIEdn6TdZKeeYrdwGzJUIBLzZiwfSRt8hi"></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Glow Ambient Backdrops -->
+<div class="relative w-full overflow-hidden">
+<div class="pointer-events-none absolute top-[-10rem] left-1/2 -translate-x-1/2 w-[42rem] h-[26rem] bg-primary-container/10 blur-[130px] rounded-full"></div>
+<div class="pointer-events-none absolute top-[28rem] right-[-8rem] w-[32rem] h-[22rem] bg-secondary/5 blur-[120px] rounded-full"></div>
+<!-- 1. HERO SECTION -->
+<section class="relative max-w-7xl mx-auto px-gutter pt-space-xl pb-space-xl lg:py-24" id="inicio">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl lg:gap-12 items-center">
+<!-- Coluna de Texto & Ações -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Status Tag -->
+<div class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-high w-fit shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-80"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span class="font-label-code text-body-sm text-primary tracking-wide">Engenharia de Software Sob Medida</span>
+</div>
+<!-- Headline Principal -->
+<h1 class="font-display-hero text-display-hero lg:text-[54px] lg:leading-[62px] text-on-surface tracking-tight font-bold">
+            Tecnologia que transforma ideias em soluções.
+          </h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Desenvolvemos software e soluções tecnológicas sob medida para transformar desafios de negócio em produtos digitais eficientes, escaláveis e inovadores.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold shadow-lg shadow-primary-container/20 hover:brightness-110 hover:-translate-y-0.5 transition-all" href="#contato">
+<span>Fale com a Maneki Neeko</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3.5 rounded-xl bg-surface-container-high text-on-surface font-headline-sm text-headline-sm font-medium hover:bg-surface-bright transition-colors" href="#solucoes">
+<span>Conheça nossas soluções</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">arrow_outward</span>
+</a>
+</div>
+<!-- Micro-telemetria de Confiança -->
+<div class="flex flex-wrap items-center gap-space-lg pt-space-md text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span class="font-label-code text-body-sm">Zero dívida técnica inicial</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">terminal</span>
+<span class="font-label-code text-body-sm">Código limpo &amp; testado</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">lock</span>
+<span class="font-label-code text-body-sm">Segurança by-design</span>
+</div>
+</div>
+</div>
+<!-- Coluna Direita: UI Abstrata de Engenharia & Telemetria -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl bg-surface-container-low p-space-md shadow-2xl overflow-hidden">
+<!-- Header do Terminal Simulado -->
+<div class="flex items-center justify-between pb-space-sm mb-space-sm bg-surface-container-lowest/50 -mx-space-md -mt-space-md px-space-md pt-3">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error-container"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-code text-body-sm text-on-surface-variant ml-2">maneki-core :: runtime</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-code text-[11px] text-secondary uppercase font-semibold">Live System</span>
+</div>
+</div>
+<!-- Dashboard de Status e Código -->
+<div class="flex flex-col gap-space-sm font-label-code text-body-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<span class="text-on-surface-variant">Cluster Deployment</span>
+<span class="text-secondary font-medium">br-south-1 / us-east-1</span>
+</div>
+<!-- Visualizador de Código Simulado -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest text-on-surface leading-relaxed overflow-x-auto text-[13px]">
+<div class="text-on-surface-variant">// Microsserviço de alta disponibilidade</div>
+<div><span class="text-primary-container">const</span> core = <span class="text-secondary">createTailoredArchitecture</span>({</div>
+<div class="pl-4">tenant: <span class="text-tertiary">'enterprise-client'</span>,</div>
+<div class="pl-4">resilience: <span class="text-secondary">true</span>,</div>
+<div class="pl-4">realtimeEvents: <span class="text-secondary">true</span>,</div>
+<div class="pl-4">latencyThresholdMs: <span class="text-primary-container">12</span></div>
+<div>});</div>
+<div class="text-secondary pt-1">&gt; Deployment status: 200 OK [all nodes synced]</div>
+</div>
+<!-- Grid de Métricas de Sistema -->
+<div class="grid grid-cols-3 gap-space-xs pt-1">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="text-[11px] text-on-surface-variant uppercase">P99 Latency</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">&lt; 12ms</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="text-[11px] text-on-surface-variant uppercase">Uptime SLO</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">99.98%</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="text-[11px] text-on-surface-variant uppercase">Health</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Optimal</span>
+</div>
+</div>
+<!-- Mini Gráfico SVG de Vazão e Telemetria -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 flex flex-col gap-1">
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Throughput / Through Requests</span>
+<span class="text-secondary font-mono">1.4k req/sec</span>
+</div>
+<svg class="w-full h-8 text-primary-container overflow-visible" fill="none" viewBox="0 0 200 30">
+<path d="M0 24 Q 25 18, 50 20 T 100 8 T 150 14 T 200 6" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 24 Q 25 18, 50 20 T 100 8 T 150 14 T 200 6 L 200 30 L 0 30 Z" fill="currentColor" fill-opacity="0.12"></path>
+</svg>
+</div>
+</div>
+<!-- Marca da Sorte Integrada -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-body-sm text-on-surface-variant font-label-code">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Maneki Neeko Engine
+              </span>
+<span class="text-primary text-[12px]">crafting tailored systems</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. NÚMEROS / DIFERENCIAIS DE VALOR (PILAFRES ESSENCIAIS) -->
+<section class="w-full bg-surface-container-lowest py-space-xl" id="diferenciais">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Pilar 1 -->
+<div class="flex flex-col gap-space-xs p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Software sob medida</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Engenharia personalizada construída com foco exclusivo nos requisitos e na lógica do seu negócio.
+          </p>
+</div>
+<!-- Pilar 2 -->
+<div class="flex flex-col gap-space-xs p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Arquitetura escalável</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Estruturas resilientes e preparadas para alto volume com baixo custo operacional e estabilidade.
+          </p>
+</div>
+<!-- Pilar 3 -->
+<div class="flex flex-col gap-space-xs p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Experiência em produtos digitais</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Da concepção à entrega contínua com metodologias ágeis e padrões internacionais de qualidade.
+          </p>
+</div>
+<!-- Pilar 4 -->
+<div class="flex flex-col gap-space-xs p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-space-xs">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Performance &amp; UX</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Foco obsessivo em tempo de resposta veloz e jornadas fluidas, intuitivas e de alto engajamento.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SOLUÇÕES TECNOLÓGICAS (GRID DE 6 CARDS) -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl lg:py-28" id="solucoes">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-code text-body-sm text-primary uppercase font-semibold tracking-wider">Soluções Tecnológicas</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">
+          Capacidades completas de ponta a ponta para sua empresa
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+        Desenvolvemos a fundação digital que acelera o crescimento de empresas inovadoras com soluções sólidas.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">devices</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">Desenvolvimento de sistemas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Sistemas corporativos robustos, seguros e customizados para operações complexas e regras de negócio exigentes.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-primary font-label-code text-body-sm">
+<span>Enterprise Ready</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">web</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">Aplicações Web</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Plataformas web interativas, ágeis e responsivas de alto padrão de usabilidade, compatíveis com qualquer dispositivo.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-secondary font-label-code text-body-sm">
+<span>High Interactivity</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">Produtos digitais</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Do discovery ao MVP e escala contínua com foco em validação rápida, tração de usuários e product-market fit.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-tertiary font-label-code text-body-sm">
+<span>MVP &amp; Scale</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">lan</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">APIs e integrações</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Arquiteturas distribuídas, microsserviços e conexão fluida entre ecossistemas legados, serviços cloud e gateways.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-primary font-label-code text-body-sm">
+<span>Distributed Systems</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">Automação de processos</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Otimização de fluxos operacionais com pipelines digitais inteligentes e ganhos expressivos de produtividade e controle.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-secondary font-label-code text-body-sm">
+<span>Process Efficiency</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">sync</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mb-space-xs">Modernização de sistemas legados</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Refatoração estratégica, migração para nuvem e redução de dívida técnica com segurança absoluta e sem paradas críticas.
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-2 text-primary-container font-label-code text-body-sm">
+<span>Legacy Evolution</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. COMO TRABALHAMOS (FLUXO / TIMELINE DOS SERVIÇOS) -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24" id="servicos">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-code text-body-sm text-secondary uppercase font-semibold tracking-wider mb-2">Nosso Processo</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">
+          Do conceito à operação com previsibilidade e excelência técnica
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 leading-relaxed">
+          Metodologia estruturada que combina comunicação clara, iterações rápidas e rigor de engenharia em cada etapa.
+        </p>
+</div>
+<!-- Timeline dos 5 Passos -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-md relative">
+<!-- Step 1 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-headline-lg text-primary font-bold">01</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Entendimento do problema</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Imersão nos objetivos do negócio, requisitos técnicos essenciais e mapeamento detalhado de riscos e viabilidade.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-headline-lg text-secondary font-bold">02</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Planejamento da solução</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Definição de arquitetura, stack tecnológica moderna, prototipagem, modelagem de dados e cronograma transparente.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-headline-lg text-tertiary font-bold">03</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">code</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Desenvolvimento</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Código limpo, testes automatizados e sprints iterativas com entregas contínuas e visibilidade total do progresso.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-headline-lg text-primary-container font-bold">04</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Testes e validação</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Garantia de qualidade (QA), auditoria de segurança rigorosa, homologação guiada e benchmarks de performance.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-code text-headline-lg text-secondary font-bold">05</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Evolução e suporte</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Monitoramento proativo, manutenção contínua e aprimoramento escalonado para acompanhar o crescimento da aplicação.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SOBRE A MANEKI NEEKO (INSTITUCIONAL CURTO E PRECISO) -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl lg:py-28" id="sobre">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Coluna Esquerda: Citação e Badge -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-high w-fit">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-code text-body-sm text-primary uppercase font-semibold">Sobre nós</span>
+</div>
+<blockquote class="font-headline-xl text-headline-xl text-on-surface font-bold leading-tight">
+          “A Maneki Neeko nasceu para transformar problemas complexos em experiências digitais simples, eficientes e escaláveis.”
+        </blockquote>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">code_blocks</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Engenharia Sob Medida</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">São Paulo, SP — Atendendo projetos globais</div>
+</div>
+</div>
+</div>
+<!-- Coluna Direita: Manifesto Técnico com Logo de Referência -->
+<div class="lg:col-span-6">
+<div class="p-space-xl rounded-2xl bg-surface-container-low shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img alt="Maneki Neeko" class="w-14 h-14 rounded-xl object-contain bg-surface-container-high p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4Y2tb1BZma8DOpskFXUSnohQhItnAP8RbM91MHli8ZcMfT8N4-1_rPtPfNTWR7PjO1wS3kGTRyMS5jZOSFUAH4nQBOG3CxqXl5bWnO4QaBN9HJyVCYGz3uYq1S2wiaEX118H3Cjmg6R-u0vVQgQfeThJQyf8a-y-jadKeB-wT725O_Azhi5_ClfAQeCFFr_zZGwhBod-KtH9cWn7cIN1FyYJB8-Eqr7Zjt5xjGowHEC0GF8B6b2jBQ90FCjf4fcIJRQ">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Maneki Neeko</h4>
+<span class="font-label-code text-body-sm text-secondary">software labs &amp; crafts</span>
+</div>
+</div>
+<span class="font-label-code text-body-sm text-on-surface-variant bg-surface-container px-2.5 py-1 rounded">est. 2025</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Inspirada na tradição de prosperidade e na obstinação dos artesãos do código, a Maneki Neeko une precisão matemática à estética moderna. Acreditamos que um software de excelência não é fruto do acaso, mas de processos intencionais, arquitetura bem ponderada e clareza pragmática de negócios.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Nossos squads atuam de forma enxuta e colaborativa com lideranças de tecnologia, garantindo entregas que não apenas resolvem os gargalos do presente, mas sedimentam uma base tecnológica preparada para os próximos anos.
+          </p>
+<div class="pt-space-xs flex items-center gap-space-md text-on-surface">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-code text-body-sm text-on-surface-variant">Pragmatismo</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-code text-body-sm text-on-surface-variant">Rigor Técnico</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-code text-body-sm text-on-surface-variant">Foco em Negócio</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. DIFERENCIAIS TÉCNICOS & DE EXECUÇÃO (7 PILARES) -->
+<section class="w-full bg-surface-container-lowest py-space-xl lg:py-24">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="max-w-2xl mb-space-xl">
+<span class="font-label-code text-body-sm text-primary uppercase font-semibold tracking-wider mb-2 block">Vantagem Competitiva</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-bold">
+          Diferenciais técnicos &amp; padrão de execução
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Critérios rigorosos aplicados em cada linha de código e decisão de arquitetura.
+        </p>
+</div>
+<!-- Grid dos 7 Pilares Requisitados -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- 1. Soluções personalizadas -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Soluções personalizadas</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sem templates genéricos: cada funcionalidade é projetada especificamente para sua demanda.</p>
+</div>
+<!-- 2. Qualidade de código -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">code_blocks</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Qualidade de código</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Padrões rígidos de clean code, tipagem estrita e suites abrangentes de testes unitários e de integração.</p>
+</div>
+<!-- 3. Arquitetura escalável -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Arquitetura escalável</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Desenho distribuído preparado para suportar aumentos exponenciais de tráfego e transações simultâneas.</p>
+</div>
+<!-- 4. Performance -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Performance</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Otimização máxima de banco de dados, caching multicamada e tempos de resposta na casa dos milissegundos.</p>
+</div>
+<!-- 5. UX/UI -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">design_services</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">UX/UI</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Interfaces funcionais e ergonomicamente concebidas para maximizar clareza e produtividade do usuário final.</p>
+</div>
+<!-- 6. Integração com tecnologias existentes -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[20px]">integration_instructions</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Integração flexível</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conectores inteligentes e compatibilidade nativa com seus ERPs, CRMs, gateways e bancos legados.</p>
+</div>
+<!-- 7. Visão de negócio -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col gap-space-xs md:col-span-2 lg:col-span-2">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Visão de negócio</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Não programamos apenas funcionalidades: traduzimos indicadores financeiros e operacionais em engenharia de impacto.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CTA FINAL (CHAMADA DE CONVERSÃO DE ALTO IMPACTO) -->
+<section class="max-w-7xl mx-auto px-gutter py-space-xl lg:py-28" id="contato">
+<div class="relative rounded-2xl bg-surface-container p-space-xl md:p-16 shadow-2xl overflow-hidden">
+<!-- Glow Decorativo Interno -->
+<div class="pointer-events-none absolute top-0 right-0 w-96 h-96 bg-primary-container/15 blur-[100px] rounded-full"></div>
+<div class="pointer-events-none absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 blur-[90px] rounded-full"></div>
+<div class="relative z-10 max-w-3xl flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-code text-body-sm text-secondary font-medium">Inicie uma conversa técnica</span>
+</div>
+<!-- Headline Exata Solicitada -->
+<h2 class="font-headline-xl text-headline-xl md:text-[44px] md:leading-[52px] text-on-surface font-bold">
+          Tem um desafio tecnológico? Vamos construir a solução.
+        </h2>
+<!-- Subtítulo Exato Solicitado -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Converse com nossos especialistas e descubra como podemos desenhar a arquitetura perfeita para o seu projeto.
+        </p>
+<!-- Ação e Micro-detalhes -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-lg pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-8 py-4 rounded-xl bg-gradient-to-r from-primary-container to-tertiary-container text-on-primary font-headline-sm text-headline-sm font-semibold shadow-xl shadow-primary-container/30 hover:brightness-110 hover:-translate-y-0.5 transition-all" href="mailto:contato@manekineeko.dev">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Fale conosco</span>
+</a>
+<!-- Micro-detalhe de Segurança & Agilidade -->
+<div class="flex flex-col gap-1 text-on-surface-variant font-label-code text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">schedule</span>
+<span>Resposta em até 24 horas úteis</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">person_check</span>
+<span>Conversa direta com engenheiros de software</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 pt-space-xl pb-space-lg"><div class="max-w-7xl mx-auto px-gutter"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-xl mb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Maneki Neeko Logo" class="w-9 h-9 rounded-full object-cover ring-1 ring-primary/30" src="https://lh3.googleusercontent.com/aida/AEtjO1VIIn-hFwzQa4kajtZ8RLI-xKYkfz8LzaXwjjhrfYS6Xrp77kNE12w9wbfQ_bbUcs9oIa35NWuPhdlCyrDSnryYeEyuEi80Vo6t5N_86packlXMIeyIxM0py-ek3YDg-O3prmMgX_I_YTtral6gd-SVU8CTXWPdJBcy8jPz0-FnBla1jx71r6uWCci9m3gAr6C5n52vgzclPEnnn0H9d9EumoB3vBGmoiXLUxBX29AIEdn6TdZKeeYrdwGzJUIBLzZiwfSRt8hi"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Maneki Neeko</span><span class="font-label-code text-body-sm text-secondary font-medium -mt-1">crafting tailored systems</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm leading-relaxed">Desenvolvimento de software e soluções tecnológicas sob medida para transformar desafios de negócio em produtos digitais eficientes, escaláveis e inovadores.</p><div class="flex items-center gap-space-sm pt-space-xs"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span></span><span class="font-label-code text-body-sm text-on-surface-variant">Disponível para novos projetos sob medida</span></div></div><div class="md:col-span-2 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Soluções</h3><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary transition-colors"><a href="#solucoes">SaaS Multitenant</a></li><li class="hover:text-primary transition-colors"><a href="#solucoes">Arquitetura Cloud</a></li><li class="hover:text-primary transition-colors"><a href="#solucoes">APIs &amp; Microsserviços</a></li><li class="hover:text-primary transition-colors"><a href="#solucoes">Pipelines DevOps</a></li></ul></div><div class="md:col-span-2 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Empresa</h3><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="hover:text-primary transition-colors"><a href="#sobre">Sobre nós</a></li><li class="hover:text-primary transition-colors"><a href="#servicos">Serviços</a></li><li class="hover:text-primary transition-colors"><a href="#diferenciais">Diferenciais</a></li><li class="hover:text-primary transition-colors"><a href="#contato">Carreiras</a></li></ul></div><div class="md:col-span-3 flex flex-col gap-space-sm"><h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Contato</h3><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-on-surface-variant"><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[16px]">alternate_email</span><a class="font-label-code text-body-sm hover:text-secondary transition-colors" href="mailto:contato@manekineeko.dev">contato@manekineeko.dev</a></li><li class="flex items-center gap-space-xs text-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[16px]">location_on</span><span>São Paulo, SP — Brasil</span></li></ul><div class="pt-space-sm"><span class="font-headline-sm text-body-sm text-on-surface block mb-space-xs font-medium">Canais Oficiais</span><div class="flex items-center gap-space-sm"><a aria-label="Repositório de Código" class="w-9 h-9 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="#"><span class="material-symbols-outlined text-[20px]">terminal</span></a><a aria-label="Comunidade Técnica" class="w-9 h-9 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="#"><span class="material-symbols-outlined text-[20px]">hub</span></a><a aria-label="Contato Direto" class="w-9 h-9 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-secondary hover:border-secondary/40 transition-all" href="#"><span class="material-symbols-outlined text-[20px]">chat</span></a></div></div></div></div><div class="border-t border-outline-variant/20 pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 Maneki Neeko. Todos os direitos reservados.</p><div class="flex items-center gap-space-lg"><a class="hover:text-on-surface transition-colors" href="#">Termos de Serviço</a><a class="hover:text-on-surface transition-colors" href="#">Privacidade</a><a class="hover:text-on-surface transition-colors" href="#">Segurança</a></div></div></div></footer></body></html>
