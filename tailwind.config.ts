@@ -127,6 +127,10 @@ export default {
 				'spark-flow': {
 					'0%': { strokeDashoffset: '100' },
 					'100%': { strokeDashoffset: '0' }
+				},
+				'float-slow': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-6px)' }
 				}
 			},
 			animation: {
@@ -134,7 +138,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.4s ease-out',
 				'pulse-subtle': 'pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'spark-flow': 'spark-flow 3s linear infinite'
+				'spark-flow': 'spark-flow 3s linear infinite',
+				'float-slow': 'float-slow 4s ease-in-out infinite'
 			}
 		}
 	},

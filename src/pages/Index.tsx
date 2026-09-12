@@ -267,27 +267,28 @@ const Index: React.FC = () => {
               <div className="pointer-events-none absolute w-72 sm:w-96 lg:w-[420px] h-72 sm:h-96 lg:h-[420px] bg-[#D47229]/22 blur-[110px] rounded-full -z-10" />
               <div className="pointer-events-none absolute w-60 sm:w-72 h-60 sm:h-72 bg-[#05B18B]/18 blur-[90px] rounded-full translate-x-12 translate-y-12 -z-10" />
 
-              {/* Floating Badge: Top Right */}
-              <div className="absolute top-2 right-2 sm:right-6 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-bounce [animation-duration:4.5s]">
-                <Sparkles className="w-4 h-4 text-[#E6CBA6] shrink-0" />
-                <span>Design &amp; Código Exclusivos</span>
-              </div>
-
-              {/* Floating Badge: Bottom Left */}
-              <div className="absolute bottom-6 left-0 sm:left-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-bounce [animation-duration:5.5s] [animation-delay:1s]">
-                <ShieldCheck className="w-4 h-4 text-[#05B18B] shrink-0" />
-                <span>Segurança &amp; Performance</span>
-              </div>
-
               {/* Central Mascot Patch Emblem */}
               <div className="relative z-10 flex flex-col items-center group">
-                <div className="relative transition-all duration-500 ease-out group-hover:scale-105 group-hover:-rotate-1">
+                <div className="relative inline-block transition-all duration-500 ease-out group-hover:scale-105 group-hover:-rotate-1">
+                  {/* Floating Badge: Top Right */}
+                  <div className="absolute -top-3 sm:-top-4 -right-1 sm:-right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow">
+                    <Sparkles className="w-4 h-4 text-[#E6CBA6] shrink-0" />
+                    <span>Design &amp; Código Exclusivos</span>
+                  </div>
+
+                  {/* Mascot Emblem Image */}
                   <img
                     src="/MANEKINEEKO.webp"
                     alt="Mascote Maneki Neeko — Software & Sistemas Sob Medida"
                     className="w-64 sm:w-80 md:w-96 lg:w-[410px] xl:w-[450px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)] drop-shadow-[0_0_60px_rgba(212,114,41,0.25)] select-none"
                     draggable={false}
                   />
+
+                  {/* Floating Badge: Bottom Left */}
+                  <div className="absolute -bottom-3 sm:-bottom-4 -left-1 sm:-left-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow [animation-delay:2s]">
+                    <ShieldCheck className="w-4 h-4 text-[#05B18B] shrink-0" />
+                    <span>Segurança &amp; Performance</span>
+                  </div>
                 </div>
               </div>
             </div>
