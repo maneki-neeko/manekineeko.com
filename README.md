@@ -1,73 +1,164 @@
-# Welcome to your Lovable project
+# 🐱 Maneki Neeko — Sites, Landing Pages & Sistemas Sob Medida
 
-## Project info
+> **O site profissional que o seu negócio precisa — sem templates amadores e sem mensalidades abusivas de agência.**
 
-**URL**: https://lovable.dev/projects/74d0999e-41ea-4fdb-b3ba-366f887872e8
+Plataforma web oficial da **Maneki Neeko** ([manekineeko.com](https://manekineeko.com)), desenvolvida com foco total em alta taxa de conversão, velocidade extrema no celular (sub-1s) e geração direta de leads para o WhatsApp.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Sobre o Projeto
 
-**Use Lovable**
+A **Maneki Neeko** cria soluções digitais exclusivas para autônomos, clínicas, consultórios, escritórios e pequenas/médias empresas que precisam de presença digital profissional com entrega ágil e investimento justo.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/74d0999e-41ea-4fdb-b3ba-366f887872e8) and start prompting.
+### 🌟 Principais Pilares:
+- **Design 100% Exclusivo:** Sem templates prontos, genéricos ou pesados de plataformas como Wix ou WordPress.
+- **Velocidade Extrema:** Otimizado para abrir em menos de 1 segundo no celular (4G/5G).
+- **Foco em Conversão no WhatsApp:** CTAs estratégicos, botão flutuante e formulário inteligente com pré-seleção de pacotes.
+- **Código Proprietário:** O código e o domínio pertencem 100% ao cliente, sem mensalidades obrigatórias de agência.
+- **Entrega Ágil:** Projetos colocados no ar em prazos de **5 a 15 dias úteis**.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠️ Stack Tecnológica
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+O projeto foi construído sobre uma arquitetura moderna, tipada e de alto desempenho:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Camada | Tecnologia | Descrição |
+| :--- | :--- | :--- |
+| **Core & Build** | [Vite 5](https://vitejs.dev/) + [React 18](https://react.dev/) | Bundler ultrarrápido com Hot Module Replacement (HMR) instantâneo |
+| **Linguagem** | [TypeScript](https://www.typescriptlang.org/) | Tipagem estática em toda a base de código para maior robustez |
+| **Estilização** | [Tailwind CSS 3](https://tailwindcss.com/) | Estilização utilitária com design system personalizado (`obsidian`, `amber`, `teal`) |
+| **Componentes UI** | [Radix UI](https://www.radix-ui.com/) / [shadcn/ui](https://ui.shadcn.com/) | Primitivas acessíveis para modais, drawers, accordions e selects |
+| **Animações** | [Framer Motion](https://www.framer.com/motion/) + `tailwindcss-animate` | Transições suaves, efeitos de ambient glow e microinterações |
+| **Ícones** | [Lucide React](https://lucide.dev/) | Coleção consistente e leve de ícones SVG |
+| **Formulários & Notificações** | [React Hook Form](https://react-hook-form.com/) + [Zod](https://zod.dev/) + [Sonner](https://sonner.emilkowal.ski/) | Validação robusta e toasts elegantes para confirmação de pedidos |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Estrutura de Diretórios
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```plaintext
+manekineeko.com/
+├── public/                     # Imagens estáticas, logo em WebP e manifestos
+│   └── MANEKINEEKO.webp        # Logotipo oficial em alta resolução
+├── src/
+│   ├── components/
+│   │   ├── landing/            # Seções principais da Landing Page
+│   │   │   ├── Header.tsx           # Topo fixo, navegação e drawer mobile
+│   │   │   ├── Hero.tsx             # Seção hero com copy de conversão e logo 3D
+│   │   │   ├── ComparisonBar.tsx    # Comparativo: Maneki Neeko vs Wix vs Agências
+│   │   │   ├── PricingPlans.tsx     # Cards de serviços, prazos e pacotes
+│   │   │   ├── Cases.tsx            # Métricas e depoimentos de clientes
+│   │   │   ├── Process.tsx          # Etapas do desenvolvimento em 4 passos
+│   │   │   ├── Faq.tsx              # Accordion com perguntas frequentes
+│   │   │   ├── ContactForm.tsx      # Simulador de orçamento e formulário de contato
+│   │   │   ├── Footer.tsx           # Rodapé institucional e canais de atendimento
+│   │   │   └── FloatingWhatsApp.tsx # Botão flutuante de conversão contínua
+│   │   └── ui/                 # Componentes reutilizáveis (shadcn/Radix UI)
+│   ├── config/
+│   │   └── site.ts             # Configuração global centralizada (telefones, links e e-mails)
+│   ├── pages/
+│   │   ├── Index.tsx           # Página inicial com orquestração das seções
+│   │   └── NotFound.tsx        # Página 404 personalizada
+│   ├── App.tsx                 # Configuração de rotas e providers
+│   ├── index.css               # Variáveis de tema e tokens CSS
+│   └── main.tsx                # Ponto de entrada da aplicação
+├── index.html                  # HTML base com SEO, Open Graph e Schema.org
+├── tailwind.config.ts          # Configuração de cores, sombras e fontes personalizadas
+└── vite.config.ts              # Configuração do Vite e aliases (@/ -> src/)
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Configuração Centralizada (`src/config/site.ts`)
 
-**Use GitHub Codespaces**
+Todas as informações de contato, links sociais e comportamentos da Maneki Neeko ficam centralizados no arquivo [`src/config/site.ts`](file:///c:/Users/Vi/Projetos/manekineeko.com/src/config/site.ts).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Para alterar número de WhatsApp, e-mail de contato ou links de redes sociais em todo o site de uma só vez:
 
-## What technologies are used for this project?
+```typescript
+export const siteConfig = {
+  name: 'Maneki Neeko',
+  tagline: 'sites & landing pages sob medida',
+  url: 'https://manekineeko.com',
+  
+  contact: {
+    email: 'contato@manekineeko.com',
+    whatsappNumber: '5511999999999', // Apenas números: DDI + DDD + Telefone
+    whatsappDisplay: '(11) 99999-9999',
+    city: 'São Paulo',
+    state: 'SP',
+    country: 'Brasil',
+    defaultWhatsappMessage: 'Olá! Vim pelo site da Maneki Neeko e gostaria de um orçamento para o meu projeto.',
+  },
+  // ...
+};
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 💻 Como Executar Localmente
 
-## How can I deploy this project?
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) versão 18 ou superior
+- Gerenciador de pacotes `npm` (ou `bun` / `pnpm`)
 
-Simply open [Lovable](https://lovable.dev/projects/74d0999e-41ea-4fdb-b3ba-366f887872e8) and click on Share -> Publish.
+### Passo a passo
 
-## Can I connect a custom domain to my Lovable project?
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/maneki-neeko/manekineeko.com.git
+   cd manekineeko.com
+   ```
 
-Yes, you can!
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+   O servidor estará disponível por padrão em: `http://localhost:8080/`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+4. **Gerar build de produção:**
+   ```bash
+   npm run build
+   ```
+   Os arquivos otimizados serão gerados no diretório `dist/`.
+
+5. **Visualizar a build de produção localmente:**
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## 📜 Scripts Disponíveis
+
+| Comando | Descrição |
+| :--- | :--- |
+| `npm run dev` | Inicia o servidor de desenvolvimento local no Vite (porta 8080) |
+| `npm run build` | Compila o projeto com TypeScript e Vite para produção na pasta `dist/` |
+| `npm run build:dev` | Compila o projeto em modo de desenvolvimento |
+| `npm run preview` | Executa um servidor local servindo a pasta `dist/` gerada |
+| `npm run lint` | Executa o ESLint para verificar padrões e qualidade do código |
+
+---
+
+## 🎨 Identidade Visual & Design System
+
+- **Tema Padrão:** Obsidian Dark (`#090A0D` / `#111318`)
+- **Cor Primária (Ações e Destaques):** Warm Amber (`#F59E0B` / `#D97706` com glow)
+- **Cor Secundária (Métricas e Sucesso):** Electric Teal (`#14B8A6` / `#0D9488`)
+- **Tipografia:**
+  - **Títulos / Display:** *Plus Jakarta Sans*
+  - **Corpo de Texto:** *Inter*
+  - **Métricas & Badges:** *JetBrains Mono*
+
+---
+
+## 📄 Licença
+
+Projeto proprietário desenvolvido para **Maneki Neeko**. Todos os direitos reservados.

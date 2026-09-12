@@ -5,17 +5,17 @@ import { getWhatsappUrl } from '@/config/site';
 export const Hero: React.FC = () => {
   return (
     <section id="inicio" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
-      
+
       {/* Ambient background glows */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[44rem] h-[24rem] bg-amber/10 blur-[130px] rounded-full" />
       <div className="pointer-events-none absolute top-72 right-[-10rem] w-[32rem] h-[24rem] bg-teal/5 blur-[120px] rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-10 items-center">
-          
+
           {/* Left Column: Conversion Copy & CTAs */}
           <div className="lg:col-span-6 flex flex-col gap-6">
-            
+
             {/* Clean, subtle status line */}
             <div className="flex items-center gap-2 text-xs font-mono text-amber">
               <span className="w-2 h-2 rounded-full bg-amber animate-pulse" />
@@ -24,8 +24,7 @@ export const Hero: React.FC = () => {
 
             {/* Main Headline */}
             <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-[50px] lg:leading-[1.12] text-white tracking-tight">
-              O site profissional que seu negócio precisa —{' '}
-              <span className="text-gradient-amber">direto ao ponto e sem agência cara.</span>
+              O site profissional que seu negócio precisa.
             </h1>
 
             {/* Subheadline */}
