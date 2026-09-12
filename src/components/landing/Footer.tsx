@@ -8,17 +8,17 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-t border-white/[0.08] bg-[#060709] text-[#9CA3AF]">
+    <footer className="border-t border-white/[0.08] bg-[#060708] text-[#94A7AC]">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-[1.4fr_0.6fr_1fr]">
         <div className="flex flex-col gap-3">
           <a href="#inicio" className="font-brand text-xl font-extrabold text-white">
-            Maneki <span className="text-primary">Neeko.</span>
+            Maneki <span className="text-[#D47229]">Neeko.</span>
           </a>
-          <p className="max-w-sm text-sm leading-relaxed text-[#9CA3AF]">
+          <p className="max-w-sm text-sm leading-relaxed text-[#94A7AC]">
             Software e sistemas sob medida para transformar processos complexos em experiências simples, claras e eficientes.
           </p>
-          <div className="flex items-center gap-2 pt-2 text-xs text-[#D1D5DB]">
-            <span className="h-2 w-2 rounded-full bg-teal-400" />
+          <div className="flex items-center gap-2 pt-2 text-xs text-[#D8D2C9]">
+            <span className="h-2 w-2 rounded-full bg-[#05B18B]" />
             <span>Disponível para novos projetos</span>
           </div>
         </div>
@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
           <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-white">
             Navegação
           </h3>
-          <div className="mt-4 flex flex-col gap-2.5 text-sm text-[#9CA3AF]">
+          <div className="mt-4 flex flex-col gap-2.5 text-sm text-[#94A7AC]">
             <a href="#solucoes" className="hover:text-white transition-colors">Soluções</a>
             <a href="#servicos" className="hover:text-white transition-colors">Serviços &amp; Pacotes</a>
             <a href="#processo" className="hover:text-white transition-colors">Como Trabalhamos</a>
@@ -40,12 +40,12 @@ const Footer: React.FC = () => {
           <h3 className="font-mono text-xs font-bold uppercase tracking-wider text-white">
             Atendimento Direto
           </h3>
-          <div className="mt-4 flex flex-col gap-3 text-sm text-[#9CA3AF]">
+          <div className="mt-4 flex flex-col gap-3 text-sm text-[#94A7AC]">
             <a
               href={`mailto:${siteConfig.contact.email}`}
               className="flex items-center gap-2.5 hover:text-white transition-colors"
             >
-              <Mail className="h-4 w-4 text-primary shrink-0" />
+              <Mail className="h-4 w-4 text-[#D47229] shrink-0" />
               <span>{siteConfig.contact.email}</span>
             </a>
             <a
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
               rel="noreferrer"
               className="flex items-center gap-2.5 hover:text-white transition-colors"
             >
-              <MessageCircle className="h-4 w-4 text-teal-400 shrink-0" />
+              <MessageCircle className="h-4 w-4 text-[#05B18B] shrink-0" />
               <span>WhatsApp: {siteConfig.contact.whatsappDisplay || '(11) 99999-9999'}</span>
             </a>
           </div>
