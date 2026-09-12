@@ -271,7 +271,7 @@ const Index: React.FC = () => {
               <div className="relative z-10 flex flex-col items-center group">
                 <div className="relative inline-block transition-all duration-500 ease-out group-hover:scale-105 group-hover:-rotate-1">
                   {/* Floating Badge: Top Right */}
-                  <div className="absolute -top-3 sm:-top-4 -right-1 sm:-right-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow">
+                  <div className="absolute top-2 sm:top-2 -right-1 sm:-right-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow">
                     <Sparkles className="w-4 h-4 text-[#E6CBA6] shrink-0" />
                     <span>Design &amp; Código Exclusivos</span>
                   </div>
@@ -285,7 +285,7 @@ const Index: React.FC = () => {
                   />
 
                   {/* Floating Badge: Bottom Left */}
-                  <div className="absolute -bottom-3 sm:-bottom-4 -left-1 sm:-left-3 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow [animation-delay:2s]">
+                  <div className="absolute bottom-5 sm:-bottom-2 -left-1 sm:-left-4 z-20 hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0E1317]/90 border border-white/[0.1] backdrop-blur-md shadow-2xl text-xs font-mono text-[#F6EFE6] animate-float-slow [animation-delay:2s]">
                     <ShieldCheck className="w-4 h-4 text-[#05B18B] shrink-0" />
                     <span>Segurança &amp; Performance</span>
                   </div>
