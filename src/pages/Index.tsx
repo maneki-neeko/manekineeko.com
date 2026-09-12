@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
 import ComparisonBar from '@/components/landing/ComparisonBar';
-import Solutions from '@/components/landing/Solutions';
 import PricingPlans from '@/components/landing/PricingPlans';
 import Cases from '@/components/landing/Cases';
 import Process from '@/components/landing/Process';
@@ -25,10 +24,7 @@ const Index: React.FC = () => {
         {/* 3. Comparativo: Maneki Neeko vs Templates Wix vs Agências Caras */}
         <ComparisonBar />
 
-        {/* 4. O Que Desenvolvemos (Grade de 6 Serviços Práticos) */}
-        <Solutions />
-
-        {/* 5. Pacotes Acessíveis & Transparentes */}
+        {/* 4. Serviços & Pacotes Transparentes (Unificado) */}
         <PricingPlans />
 
         {/* 6. Cases de Clientes com Resultados Reais */}
