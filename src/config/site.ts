@@ -4,9 +4,9 @@
  */
 export const siteConfig = {
   name: 'Maneki Neeko',
-  tagline: 'sites & landing pages sob medida',
+  tagline: 'software sob medida',
   description:
-    'Landing pages de alta conversão, sites institucionais modernos e sistemas web sob medida com foco em conversão e entrega rápida.',
+    'Sistemas web, automações e soluções digitais sob medida para transformar processos complexos em experiências simples.',
   url: 'https://manekineeko.com',
   
   // Contatos de Atendimento
