@@ -289,15 +289,6 @@ const Index: React.FC = () => {
                     draggable={false}
                   />
                 </div>
-
-                {/* Status Pill underneath Logo */}
-                <div className="mt-4 inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0E1317]/90 border border-white/[0.08] backdrop-blur-md shadow-lg text-xs font-mono text-[#D8D2C9]">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#05B18B] opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#05B18B]" />
-                  </span>
-                  <span>Disponível para novos projetos neste mês</span>
-                </div>
               </div>
             </div>
 
@@ -524,7 +515,7 @@ const Index: React.FC = () => {
 
         {/* 7. Seção Perguntas Frequentes (FAQ) */}
         <section id="faq" className="section-space relative border-t border-white/[0.06] scroll-mt-12">
-          <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <div className="max-w-4xl mx-auto px-5 sm:px-8">
             <div className="flex flex-col items-center text-center mb-12">
               <p className="section-kicker">Tire suas dúvidas</p>
               <h2 className="section-title">Perguntas Frequentes</h2>
@@ -533,22 +524,44 @@ const Index: React.FC = () => {
               </p>
             </div>
 
-            <Accordion type="single" collapsible defaultValue="faq-1" className="w-full flex flex-col gap-3">
-              {faqs.map((faq) => (
-                <AccordionItem
-                  key={faq.id}
-                  value={faq.id}
-                  className="border border-white/[0.08] rounded-xl px-5 bg-[#0E1317]/80 transition-colors data-[state=open]:border-[#D47229]/40 data-[state=open]:bg-[#12181E]"
+            {/* Unified FAQ Card Panel */}
+            <div className="rounded-3xl border border-white/[0.08] bg-[#0E1317]/90 p-4 sm:p-8 backdrop-blur-xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)]">
+              <Accordion type="single" collapsible className="w-full divide-y divide-white/[0.08]">
+                {faqs.map((faq, index) => (
+                  <AccordionItem
+                    key={faq.id}
+                    value={faq.id}
+                    className="border-b-0 transition-colors rounded-2xl hover:bg-white/[0.02] data-[state=open]:bg-white/[0.02] px-2 sm:px-4"
+                  >
+                    <AccordionTrigger className="font-brand font-bold text-left text-base sm:text-lg text-white hover:no-underline py-5 sm:py-6 hover:text-[#D47229] transition-colors [&>svg]:h-8 [&>svg]:w-8 [&>svg]:p-2 [&>svg]:rounded-xl [&>svg]:bg-white/[0.04] [&>svg]:border [&>svg]:border-white/[0.08] [&>svg]:text-[#94A7AC] [&>svg]:transition-all [&>svg]:duration-200 [&[data-state=open]>svg]:bg-[#D47229]/15 [&[data-state=open]>svg]:border-[#D47229]/40 [&[data-state=open]>svg]:text-[#D47229]">
+                      <div className="flex items-center gap-3 sm:gap-4 pr-4">
+                        <span className="font-mono text-xs sm:text-sm font-semibold text-[#05B18B] bg-[#05B18B]/10 border border-[#05B18B]/20 w-8 h-8 rounded-lg flex items-center justify-center shrink-0">
+                          {`0${index + 1}`}
+                        </span>
+                        <span className="leading-snug">{faq.question}</span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm sm:text-base text-[#94A7AC] leading-relaxed pl-11 sm:pl-12 pr-4 pt-1 pb-6">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+
+              {/* Fast FAQ WhatsApp Link */}
+              <div className="mt-6 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#94A7AC] px-2 sm:px-4">
+                <span>Ainda tem alguma dúvida específica sobre o seu projeto?</span>
+                <a
+                  href={getWhatsappUrl('Olá! Tenho uma dúvida específica sobre um projeto com a Maneki Neeko.')}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 font-semibold text-[#05B18B] hover:text-[#05B18B]/80 transition-colors"
                 >
-                  <AccordionTrigger className="font-brand font-semibold text-left text-sm sm:text-base text-white hover:no-underline py-4.5 hover:text-[#D47229] transition-colors">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-xs sm:text-sm text-[#94A7AC] leading-relaxed pt-1 pb-4">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <span>Tirar dúvidas no WhatsApp →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
