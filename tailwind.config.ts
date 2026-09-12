@@ -61,9 +61,24 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'deep-teal': 'hsl(var(--deep-teal))',
+				amber: {
+					DEFAULT: '#F59E0B',
+					hover: '#D97706',
+				},
+				teal: {
+					DEFAULT: '#14B8A6',
+					hover: '#0D9488',
+				},
+				obsidian: {
+					DEFAULT: '#08090C',
+					surface: '#0F1117',
+					border: 'rgba(255, 255, 255, 0.08)',
+				},
 			},
 			boxShadow: {
-				primary: '0 12px 28px hsl(var(--primary) / 0.24)',
+				primary: '0 12px 32px -4px rgba(242, 100, 25, 0.35)',
+				'glow-amber': '0 0 40px -10px rgba(245, 158, 11, 0.4)',
+				'glow-teal': '0 0 40px -10px rgba(20, 184, 166, 0.3)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

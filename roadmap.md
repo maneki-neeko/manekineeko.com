@@ -1,6 +1,6 @@
-- [x] Redesenhar a página no estilo glassmorphism claro aprovado
-- [x] Reposicionar conteúdo para software sob medida e produto municipal real
-- [x] Remover métricas, cases e promessas não comprovadas
-- [x] Fazer o formulário gerar uma conversa preenchida no WhatsApp
-- [x] Manter a tipografia atual no nome “Maneki Neeko”
-- [ ] Validar desktop, celular, navegação e erros
+- [x] Migrar a página para modo escuro exclusivo (obsidian & warm amber / teal)
+- [x] Remover o container mockup de telefonia do Hero e substituir pelo showcase da logo mascote Maneki Neeko
+- [x] Otimizar paleta de cores para modo noturno comercial com glassmorphism e iluminação ambiente
+- [x] Manter a tipografia no nome “Maneki Neeko” com gradiente em destaque
+- [x] Formulário integrado para gerar conversa preenchida no WhatsApp + card de atendimento imediato
+- [x] Validar build de produção e responsividade
