@@ -61,24 +61,46 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				'deep-teal': 'hsl(var(--deep-teal))',
+				vermilion: {
+					DEFAULT: '#C42A10',
+					hover: '#A8220B',
+				},
+				terracotta: {
+					DEFAULT: '#D47229',
+					hover: '#B85E1D',
+				},
+				cream: {
+					DEFAULT: '#E6CBA6',
+					soft: '#F6EFE6',
+				},
+				maroon: '#772B1B',
+				jade: {
+					DEFAULT: '#05B18B',
+					hover: '#049273',
+				},
 				amber: {
-					DEFAULT: '#F59E0B',
-					hover: '#D97706',
+					DEFAULT: '#D47229',
+					hover: '#B85E1D',
 				},
 				teal: {
-					DEFAULT: '#14B8A6',
-					hover: '#0D9488',
+					DEFAULT: '#05B18B',
+					light: '#5EA9AC',
+					ocean: '#347986',
+					spruce: '#2A5358',
+					hover: '#049273',
 				},
 				obsidian: {
-					DEFAULT: '#08090C',
-					surface: '#0F1117',
-					border: 'rgba(255, 255, 255, 0.08)',
+					DEFAULT: '#090909',
+					surface: '#0E1317',
+					card: '#12181E',
+					border: 'rgba(255, 255, 255, 0.07)',
 				},
 			},
 			boxShadow: {
-				primary: '0 12px 32px -4px rgba(242, 100, 25, 0.35)',
-				'glow-amber': '0 0 40px -10px rgba(245, 158, 11, 0.4)',
-				'glow-teal': '0 0 40px -10px rgba(20, 184, 166, 0.3)',
+				primary: '0 12px 32px -4px rgba(212, 114, 41, 0.4)',
+				'glow-amber': '0 0 40px -10px rgba(212, 114, 41, 0.4)',
+				'glow-teal': '0 0 40px -10px rgba(5, 177, 139, 0.35)',
+				'glow-vermilion': '0 0 40px -10px rgba(196, 42, 16, 0.4)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

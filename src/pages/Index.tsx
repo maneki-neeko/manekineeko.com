@@ -410,10 +410,10 @@ const Index: React.FC = () => {
                     <div className="mt-8 pt-5 border-t border-white/[0.08]">
                       <Button
                         asChild
-                        className={`w-full h-12 rounded-xl text-sm font-semibold transition-all ${
+                        className={`w-full h-12 rounded-xl text-sm font-semibold transition-all duration-300 ${
                           plan.featured
-                            ? 'bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25'
-                            : 'bg-white/[0.05] text-white hover:bg-white/[0.1] border border-white/[0.08]'
+                            ? 'bg-gradient-to-r from-[#FF5E0E] via-[#F26419] to-[#FF7A1A] hover:brightness-110 text-white shadow-[0_8px_20px_-4px_rgba(242,100,25,0.45),_inset_0_1px_0_rgba(255,255,255,0.25)] border border-white/20 hover:scale-[1.01]'
+                            : 'bg-white/[0.05] text-white hover:bg-white/[0.1] border border-white/[0.08] hover:border-white/[0.2]'
                         }`}
                       >
                         <a
@@ -561,9 +561,6 @@ const Index: React.FC = () => {
               {/* Left Column */}
               <div className="lg:col-span-5 flex flex-col justify-between">
                 <div>
-                  <div className="icon-box mb-5">
-                    <Sparkles />
-                  </div>
                   <p className="section-kicker">Vamos construir?</p>
                   <h2 className="section-title">Conte seu desafio. Desenhamos o próximo passo.</h2>
                   <p className="section-copy">

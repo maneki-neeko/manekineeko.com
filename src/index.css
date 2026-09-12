@@ -5,26 +5,28 @@
 @layer base {
   :root {
     color-scheme: dark;
-    --background: 225 25% 4%; /* #08090C obsidian */
-    --foreground: 210 20% 98%; /* #F3F4F6 crisp text */
-    --card: 224 20% 7%; /* #0F1117 deep dark surface */
-    --card-foreground: 210 20% 98%;
-    --popover: 224 20% 7%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 24 94% 53%; /* #F26419 vibrant warm coral/orange */
+    --background: 0 0% 3.5%; /* #090909 obsidian */
+    --foreground: 36 35% 94%; /* #F6EFE6 warm cream white */
+    --card: 203 24% 7%; /* #0E1317 dark slate surface */
+    --card-foreground: 36 35% 94%;
+    --popover: 203 24% 7%;
+    --popover-foreground: 36 35% 94%;
+    --primary: 26 68% 50%; /* #D47229 terracotta amber */
     --primary-foreground: 0 0% 100%;
-    --secondary: 38 92% 50%; /* #F59E0B gold/amber */
-    --secondary-foreground: 225 25% 4%;
-    --deep-teal: 173 80% 40%; /* #14B8A6 neon teal */
-    --muted: 224 16% 12%; /* #151820 */
-    --muted-foreground: 218 11% 65%; /* #9CA3AF */
-    --accent: 224 18% 12%;
-    --accent-foreground: 210 20% 98%;
-    --destructive: 0 72% 51%;
+    --secondary: 167 95% 36%; /* #05B18B jade teal */
+    --secondary-foreground: 0 0% 100%;
+    --deep-teal: 167 95% 36%; /* #05B18B */
+    --vermilion: 9 85% 42%; /* #C42A10 */
+    --cream: 35 55% 78%; /* #E6CBA6 */
+    --muted: 203 20% 12%; /* #141C22 */
+    --muted-foreground: 195 12% 65%; /* #94A7AC soft slate */
+    --accent: 203 20% 12%;
+    --accent-foreground: 36 35% 94%;
+    --destructive: 9 85% 42%;
     --destructive-foreground: 0 0% 100%;
-    --border: 224 14% 15%; /* #1D212A */
-    --input: 224 14% 15%;
-    --ring: 24 94% 53%;
+    --border: 203 22% 14%; /* #172229 */
+    --input: 203 22% 14%;
+    --ring: 26 68% 50%;
     --radius: 0.875rem;
   }
 
@@ -34,34 +36,34 @@
     @apply bg-background text-foreground antialiased; 
     font-family: 'Work Sans', system-ui, sans-serif; 
     overflow-x: hidden; 
-    background-color: #08090C;
+    background-color: #090909;
   }
   h1, h2, h3, h4 { letter-spacing: -0.02em; }
-  ::selection { background: rgba(242, 100, 25, 0.35); color: #ffffff; }
+  ::selection { background: rgba(212, 114, 41, 0.35); color: #F6EFE6; }
 }
 
 @layer components {
   .font-brand { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; letter-spacing: -0.02em; }
   
   .glass-card { 
-    @apply rounded-2xl border border-white/[0.08] bg-[#0F1117]/85 backdrop-blur-xl transition-all duration-300; 
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05); 
+    @apply rounded-2xl border border-white/[0.07] bg-[#0E1317]/85 backdrop-blur-xl transition-all duration-300; 
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.04); 
   }
   .glass-card:hover { 
-    @apply border-primary/40;
+    border-color: rgba(212, 114, 41, 0.4);
     transform: translateY(-3px); 
-    box-shadow: 0 20px 45px -15px rgba(242, 100, 25, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 20px 45px -15px rgba(212, 114, 41, 0.18), inset 0 1px 0 rgba(230, 203, 166, 0.08); 
   }
 
   .glass-pill { 
     @apply rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-1.5 backdrop-blur-xl; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
   }
 
   .section-space { @apply py-20 lg:py-28; }
   .section-kicker { @apply mb-3 font-mono text-xs font-semibold uppercase tracking-wider text-primary; }
   .section-title { @apply font-brand text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl tracking-tight; }
-  .section-copy { @apply mt-4 max-w-2xl text-base leading-relaxed text-[#9CA3AF] sm:text-lg; }
+  .section-copy { @apply mt-4 max-w-2xl text-base leading-relaxed text-[#94A7AC] sm:text-lg; }
 
   .icon-box { 
     @apply flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary border border-primary/20; 
@@ -69,28 +71,28 @@
   .icon-box svg { @apply h-6 w-6; }
 
   .product-feature { 
-    @apply grid gap-10 overflow-hidden rounded-3xl border border-teal-500/20 bg-gradient-to-br from-[#0c1a1c] via-[#081214] to-[#070b0e] p-7 sm:p-10 lg:grid-cols-12 lg:items-center lg:p-14; 
-    box-shadow: 0 25px 65px -15px rgba(20, 184, 166, 0.18); 
+    @apply grid gap-10 overflow-hidden rounded-3xl border border-[#05B18B]/25 bg-gradient-to-br from-[#0c1a1b] via-[#091316] to-[#070b0d] p-7 sm:p-10 lg:grid-cols-12 lg:items-center lg:p-14; 
+    box-shadow: 0 25px 65px -15px rgba(5, 177, 139, 0.18); 
   }
 
   .contact-panel { 
-    @apply grid gap-10 rounded-3xl border border-white/[0.08] bg-[#0F1117]/90 p-7 backdrop-blur-xl sm:p-10 lg:grid-cols-12 lg:items-start lg:p-14; 
-    box-shadow: 0 24px 70px -20px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05); 
+    @apply grid gap-10 rounded-3xl border border-white/[0.08] bg-[#0E1317]/90 p-7 backdrop-blur-xl sm:p-10 lg:grid-cols-12 lg:items-start lg:p-14; 
+    box-shadow: 0 24px 70px -20px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(230, 203, 166, 0.04); 
   }
 }
 
 .ambient-shape { position: absolute; border-radius: 9999px; filter: blur(100px); pointer-events: none; }
-.ambient-shape-primary { width: 28rem; height: 28rem; left: -10rem; top: 0rem; background: radial-gradient(circle, rgba(242, 100, 25, 0.16) 0%, transparent 70%); }
-.ambient-shape-secondary { width: 32rem; height: 32rem; right: -12rem; top: 10rem; background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%); }
+.ambient-shape-primary { width: 30rem; height: 30rem; left: -10rem; top: 0rem; background: radial-gradient(circle, rgba(212, 114, 41, 0.18) 0%, rgba(196, 42, 16, 0.08) 40%, transparent 70%); }
+.ambient-shape-secondary { width: 32rem; height: 32rem; right: -12rem; top: 10rem; background: radial-gradient(circle, rgba(5, 177, 139, 0.15) 0%, rgba(52, 121, 134, 0.07) 50%, transparent 70%); }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #FF7A1A 0%, #F59E0B 100%);
+  background: linear-gradient(135deg, #E6CBA6 0%, #D47229 55%, #C42A10 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-teal {
-  background: linear-gradient(135deg, #2DD4BF 0%, #0D9488 100%);
+  background: linear-gradient(135deg, #5EA9AC 0%, #05B18B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
