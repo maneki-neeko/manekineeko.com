@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import Header from '@/components/landing/Header';
 import Footer from '@/components/landing/Footer';
+import FloatingWhatsApp from '@/components/landing/FloatingWhatsApp';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -636,11 +637,15 @@ const Index: React.FC = () => {
 
                 <Button
                   type="submit"
-                  size="lg"
-                  className="h-13 rounded-xl sm:col-span-2 bg-primary hover:bg-primary/90 text-white font-semibold shadow-lg shadow-primary/25 transition-all hover:scale-[1.01]"
+                  className="group relative h-14 rounded-2xl sm:col-span-2 bg-gradient-to-r from-[#FF5E0E] via-[#F26419] to-[#FF7A1A] hover:brightness-110 text-white font-brand text-base font-bold tracking-tight shadow-[0_12px_28px_-6px_rgba(242,100,25,0.45),_inset_0_1px_0_rgba(255,255,255,0.3)] hover:shadow-[0_16px_36px_-6px_rgba(242,100,25,0.65),_inset_0_1px_0_rgba(255,255,255,0.4)] border border-white/20 transition-all duration-300 hover:scale-[1.01] active:scale-[0.98] flex items-center justify-center cursor-pointer"
                 >
-                  <Send className="w-4 h-4 mr-1.5" />
-                  Continuar conversa no WhatsApp
+                  <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-black/15 mr-2.5 transition-transform group-hover:scale-110">
+                    <MessageCircle className="w-4 h-4 fill-white text-white" />
+                  </span>
+                  <span>Continuar conversa no WhatsApp</span>
+                  <span className="ml-2 text-white/80 transition-transform duration-300 group-hover:translate-x-1 font-mono">
+                    →
+                  </span>
                 </Button>
               </form>
             </div>
@@ -651,21 +656,8 @@ const Index: React.FC = () => {
       {/* 9. Rodapé com links e contatos */}
       <Footer />
 
-      {/* 10. Botão Flutuante de WhatsApp com Glow */}
-      <Button
-        asChild
-        size="icon"
-        className="fixed bottom-6 right-6 z-40 h-14 w-14 rounded-full bg-primary hover:bg-primary/90 text-white shadow-[0_8px_30px_rgba(242,100,25,0.45)] transition-all hover:scale-110 active:scale-95"
-        aria-label="Falar no WhatsApp"
-      >
-        <a
-          href={getWhatsappUrl('Olá! Vim pelo site da Maneki Neeko e gostaria de um orçamento.')}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MessageCircle className="h-6 w-6 fill-white" />
-        </a>
-      </Button>
+      {/* 10. Botão Flutuante de WhatsApp com Balão Interativo */}
+      <FloatingWhatsApp />
     </div>
   );
 };
