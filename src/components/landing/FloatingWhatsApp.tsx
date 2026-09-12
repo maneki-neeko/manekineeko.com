@@ -9,8 +9,11 @@ export const FloatingWhatsApp: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {/* Tooltip speech bubble */}
       {showTooltip && (
-        <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-obsidian-surface-1 border border-hairline text-xs font-body text-white shadow-2xl animate-fade-in">
-          <span className="w-2 h-2 rounded-full bg-teal shrink-0 animate-ping" />
+        <div className="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0F1117]/95 border border-white/[0.12] text-xs font-body text-white shadow-2xl animate-fade-in backdrop-blur-md">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-400" />
+          </span>
           <span>Fale direto no WhatsApp</span>
           <button
             type="button"
@@ -19,9 +22,9 @@ export const FloatingWhatsApp: React.FC = () => {
               setShowTooltip(false);
             }}
             aria-label="Fechar balão"
-            className="text-[#9CA3AF] hover:text-white ml-1"
+            className="text-[#9CA3AF] hover:text-white ml-1 transition-colors"
           >
-            <X className="w-3 h-3" />
+            <X className="w-3.5 h-3.5" />
           </button>
         </div>
       )}
