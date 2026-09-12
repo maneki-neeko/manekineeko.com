@@ -1,6 +1,6 @@
-- [ ] Redesenhar a página no estilo glassmorphism claro aprovado
-- [ ] Reposicionar conteúdo para software sob medida e produto municipal real
-- [ ] Remover métricas, cases e promessas não comprovadas
-- [ ] Fazer o formulário gerar uma conversa preenchida no WhatsApp
-- [ ] Manter a tipografia atual no nome “Maneki Neeko”
+- [x] Redesenhar a página no estilo glassmorphism claro aprovado
+- [x] Reposicionar conteúdo para software sob medida e produto municipal real
+- [x] Remover métricas, cases e promessas não comprovadas
+- [x] Fazer o formulário gerar uma conversa preenchida no WhatsApp
+- [x] Manter a tipografia atual no nome “Maneki Neeko”
 - [ ] Validar desktop, celular, navegação e erros
