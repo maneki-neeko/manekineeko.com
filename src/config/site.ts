@@ -12,8 +12,8 @@ export const siteConfig = {
   // Contatos de Atendimento
   contact: {
     email: 'contato@manekineeko.com',
-    whatsappNumber: '5511999999999', // Apenas números: DDI + DDD + Telefone
-    whatsappDisplay: '(11) 99999-9999',
+    whatsappNumber: '5541920085746', // Apenas números: DDI + DDD + Telefone
+    whatsappDisplay: '(41) 92008-5746',
     city: 'São Paulo',
     state: 'SP',
     country: 'Brasil',
