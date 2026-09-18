@@ -86,8 +86,8 @@ export const siteConfig = {
     email: 'contato@manekineeko.com',
     whatsappNumber: '5511999999999', // Apenas números: DDI + DDD + Telefone
     whatsappDisplay: '(11) 99999-9999',
-    city: 'São Paulo',
-    state: 'SP',
+    city: 'Curitiba',
+    state: 'PR',
     country: 'Brasil',
     defaultWhatsappMessage: 'Olá! Vim pelo site da Maneki Neeko e gostaria de um orçamento para o meu projeto.',
   },
