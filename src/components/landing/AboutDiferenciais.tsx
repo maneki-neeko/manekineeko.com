@@ -78,7 +78,7 @@ export const AboutDiferenciais: React.FC = () => {
                     Engenharia de Software Sob Medida
                   </div>
                   <div className="font-mono text-xs text-[#9CA3AF]">
-                    São Paulo, SP — Atendendo clientes globais
+                    Curitiba, PR — Atendendo clientes globais
                   </div>
                 </div>
               </div>

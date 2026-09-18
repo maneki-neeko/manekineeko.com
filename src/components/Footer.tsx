@@ -33,7 +33,7 @@ const Footer = () => {
                 <Heart className="w-4 h-4 text-maneki-primary" />
                 <span>e</span>
                 <Code className="w-4 h-4 text-maneki-secondary" />
-                <span>em São Paulo</span>
+                <span>em Curitiba</span>
               </div>
             </div>
 
