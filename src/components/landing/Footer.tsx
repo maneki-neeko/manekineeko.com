@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
           <div className="mt-4 flex flex-col gap-2.5 text-sm text-[#94A7AC]">
             <a href="#solucoes" className="hover:text-white transition-colors">Soluções</a>
             <a href="#servicos" className="hover:text-white transition-colors">Serviços &amp; Pacotes</a>
+            <a href="#cases" className="hover:text-white transition-colors">Resultados &amp; Cases</a>
             <a href="#processo" className="hover:text-white transition-colors">Como Trabalhamos</a>
-            <a href="#diferenciais" className="hover:text-white transition-colors">Diferenciais</a>
             <a href="#faq" className="hover:text-white transition-colors">Dúvidas Frequentes</a>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               className="flex items-center gap-2.5 hover:text-white transition-colors"
             >
               <MessageCircle className="h-4 w-4 text-[#05B18B] shrink-0" />
-              <span>WhatsApp: {siteConfig.contact.whatsappDisplay || '(11) 99999-9999'}</span>
+              <span>WhatsApp: {siteConfig.contact.whatsappDisplay || '(41) 92008-5746'}</span>
             </a>
           </div>
         </div>
