@@ -5,19 +5,19 @@ import { getWhatsappUrl } from '@/config/site';
 
 const links = [
   ['Soluções', '#solucoes'],
-  ['Serviços', '#servicos'],
-  ['Processo', '#processo'],
-  ['Diferenciais', '#diferenciais'],
+  ['Serviços & Pacotes', '#servicos'],
+  ['Resultados', '#cases'],
+  ['Como Funciona', '#processo'],
   ['Dúvidas', '#faq'],
 ];
 
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-[#090909]/85 backdrop-blur-xl transition-colors">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/[0.08] bg-[#090909]/90 backdrop-blur-xl transition-colors">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#inicio" className="flex flex-col leading-none group" aria-label="Maneki Neeko — início">
-          <span className="font-brand text-xl font-extrabold text-white group-hover:text-[#D47229] transition-colors">
+        <a href="#inicio" className="flex flex-col leading-none group" aria-label="Maneki Neeko Início">
+          <span className="font-brand text-xl sm:text-2xl font-extrabold text-white group-hover:text-[#D47229] transition-colors tracking-tight">
             Maneki <span className="text-[#D47229]">Neeko.</span>
           </span>
           <span className="mt-1 font-mono text-[10px] text-[#94A7AC] tracking-wider uppercase">
@@ -40,11 +40,11 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-3">
           <Button
             asChild
-            className="hidden rounded-xl sm:inline-flex bg-gradient-to-r from-[#C42A10] to-[#D47229] hover:brightness-110 text-white font-semibold shadow-lg shadow-[#D47229]/25 transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="hidden rounded-xl sm:inline-flex bg-[#D47229] hover:bg-[#B85E1D] text-white font-brand text-sm font-bold shadow-glow-amber hover:brightness-110 active:scale-[0.98] transition-all"
           >
-            <a href={getWhatsappUrl()} target="_blank" rel="noreferrer">
-              <MessageCircle className="w-4 h-4 fill-white" />
-              Fale conosco
+            <a href={getWhatsappUrl('Olá! Gostaria de conversar com a Maneki Neeko sobre um projeto.')} target="_blank" rel="noreferrer">
+              <MessageCircle className="w-4 h-4 fill-white text-white mr-1.5" />
+              Falar no WhatsApp
             </a>
           </Button>
           <Button
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
               onClick={() => setOpen(false)}
               className="rounded-lg px-3.5 py-3 font-semibold text-primary hover:bg-primary/10 transition-colors"
             >
-              Iniciar projeto →
+              Iniciar projeto
             </a>
           </div>
         </nav>
